@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="ConwayGameOfLife">
+  <head>
+    <meta charset="utf-8" />
+    <title>Conway's Game of Life in Angular.js</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js" data-semver="1.0.8"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="MainCtrl">
+    <div>
+      <label>Grid size:</label> <input ng-model="gridsize" />
+      <button ng-click="generateInitialGrid()">Generate</button>
+    </div>
+    <div ng-repeat="board in boards">
+      <h3>Iteration {{board.iterationNumber}}</h3>
+      <table>
+        <tr ng-repeat="row in board.grid">
+          <td class="cell" ng-class="{true:'livingCell', false:'deadCell'}[cell.isLiving]" ng-repeat="cell in row"></td>
+        </tr>
+      </table>
+    </div>
+    <div ng-hide="hideTickButton">
+      <button ng-click="tick()">Tick</button>
+    </div>
+    <div ng-hide="hideTerminalStateMessage">
+      <p>Terminal state reached</p>
+    </div>
+  </body>
+</html>

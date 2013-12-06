@@ -1,0 +1,19 @@
+/* Put your css in here */
+
+.cell {
+  height:1em;
+  width:1em;
+}
+
+.livingCell {
+  background-color:green;
+}
+
+.deadCell {
+  background-color:black;
+}
+
+h3 {
+  padding:0;
+  margin:0;
+}
