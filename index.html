@@ -5,9 +5,12 @@
     <title>Conway's Game of Life in Angular.js</title>
     <script>document.write('<base href="' + document.location + '" />');</script>
     <link rel="stylesheet" href="style.css" />
-    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js" data-semver="1.0.8"></script>
+    <script src="http://searls.github.com/jasmine-all/jasmine-all-min.js"></script>
+    <link rel="stylesheet" type="text/css" href=".grunt/grunt-contrib-jasmine/jasmine.css">
+    <script data-require="angular.js@1.2.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js" data-semver="1.2.0"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-mocks.js"></script>
     <script src="app.js"></script>
-    <script src="MainCtrl.js"></script>
+    <script src="unittests/MainCtrl.spec.js"></script>
   </head>
   <body ng-controller="MainCtrl">
     <div>

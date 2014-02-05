@@ -1,10 +1,3 @@
-(function(window, angular) {
-
-Array.prototype.last = function() {
-    return this[this.length-1];
-};
-
-var app = angular.module('ConwayGameOfLife', []);
 app.controller('MainCtrl', ['$scope', function($scope) {
     
     $scope.gridsize = 4;
@@ -119,11 +112,3 @@ app.controller('MainCtrl', ['$scope', function($scope) {
         }
     };
 }]);
-app.factory('cell', function() {
-    return {
-        living: true
-    };
-});
-
-})(window, window.angular);
-
