@@ -10,6 +10,18 @@ module.exports = function(grunt) {
                 }
             }
         },
+        jasmine: {
+            all: {
+                src: [
+                ],
+                options: {
+                    specs: '*.spec.js',
+                    outfile: 'test-results.html',
+                    keepRunner: true,
+                    /*helpers: ['angular-mocks.js'],*/
+                }
+            }
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
