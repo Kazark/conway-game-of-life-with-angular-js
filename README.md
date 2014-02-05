@@ -5,4 +5,7 @@ that it might be useful to some other Angular beginner, I've pushed it to
 Github. After downloading, you should be able to open the HTML file and see it
 work right in your browser with no special configuration.
 
+**Update**: I have now begun to use this project to teach myself how to set up a
+project with npm/Grunt/Jasmine/Angular.
+
 ![Sample Gameplay Screenshot](http://i.imgur.com/mZmMs8t.png)
