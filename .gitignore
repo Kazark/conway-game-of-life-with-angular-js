@@ -2,3 +2,4 @@ node_modules
 Session.vim
 test-results.html
 .grunt
+deploy
