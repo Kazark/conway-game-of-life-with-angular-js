@@ -28,4 +28,40 @@ describe('Conway Game of Life main controller', function() {
     it('should initially hide the "terminal state reached" message', function() {
         expect(scope.hideTerminalStateMessage).toBe(true);
     });
+
+    describe('$scope.makeNewBoardOfSize function', function() {
+        it('should exist', function() {
+            expect(scope.makeNewBoardOfSize).toBeTruthy();
+        });
+    });
+
+    describe('$scope.tick function', function() {
+        it('should exist', function() {
+            expect(scope.tick).toBeTruthy();
+        });
+    });
+
+    describe('$scope.deadCell function', function() {
+        it('should exist', function() {
+            expect(scope.deadCell).toBeTruthy();
+        });
+    });
+
+    describe('$scope.livingCell function', function() {
+        it('should exist', function() {
+            expect(scope.livingCell).toBeTruthy();
+        });
+    });
+
+    describe('$scope.generateInitialGrid function', function() {
+        it('should exist', function() {
+            expect(scope.generateInitialGrid).toBeTruthy();
+        });
+    });
+
+    describe('$scope.numberOfLivingNeighbors function', function() {
+        it('should exist', function() {
+            expect(scope.numberOfLivingNeighbors).toBeTruthy();
+        });
+    });
 });
