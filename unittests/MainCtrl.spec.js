@@ -16,4 +16,8 @@ describe('Conway Game of Life main controller', function() {
     it('should exist', function() {
         expect(ctrl).toBeTruthy();
     });
+
+    it('should default grid size to four', function() {
+        expect(scope.gridsize).toBe(4);
+    });
 });
