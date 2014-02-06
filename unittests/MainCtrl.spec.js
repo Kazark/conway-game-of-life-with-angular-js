@@ -24,4 +24,8 @@ describe('Conway Game of Life main controller', function() {
     it('should initially hide the "tick" button', function() {
         expect(scope.hideTickButton).toBe(true);
     });
+
+    it('should initially hide the "terminal state reached" message', function() {
+        expect(scope.hideTerminalStateMessage).toBe(true);
+    });
 });
