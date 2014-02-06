@@ -20,4 +20,8 @@ describe('Conway Game of Life main controller', function() {
     it('should default grid size to four', function() {
         expect(scope.gridsize).toBe(4);
     });
+
+    it('should initially hide the "tick" button', function() {
+        expect(scope.hideTickButton).toBe(true);
+    });
 });
