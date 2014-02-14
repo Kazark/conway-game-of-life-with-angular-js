@@ -69,6 +69,12 @@ describe('Conway Game of Life main controller', function() {
 
             expect(scope.currentIterationNumber).toBe(0);
         });
+
+        it('should create a list of grids with only the new grid in it', function() {
+            scope.generateInitialGrid();
+
+            expect(scope.boards.length).toBe(1);
+        });
     });
 
     describe('$scope.numberOfLivingNeighbors function', function() {
