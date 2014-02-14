@@ -57,6 +57,12 @@ describe('Conway Game of Life main controller', function() {
         it('should exist', function() {
             expect(scope.generateInitialGrid).toBeTruthy();
         });
+
+        it('should show the tick button', function() {
+            scope.generateInitialGrid();
+
+            expect(scope.hideTickButton).toBe(false);
+        });
     });
 
     describe('$scope.numberOfLivingNeighbors function', function() {
