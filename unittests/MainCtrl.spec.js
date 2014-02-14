@@ -63,6 +63,12 @@ describe('Conway Game of Life main controller', function() {
 
             expect(scope.hideTickButton).toBe(false);
         });
+
+        it('should set the current iteration number to zero', function() {
+            scope.generateInitialGrid();
+
+            expect(scope.currentIterationNumber).toBe(0);
+        });
     });
 
     describe('$scope.numberOfLivingNeighbors function', function() {
