@@ -33,20 +33,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        jasmine: {
-            all: {
-                src: ['deploy/app.js'],
-                options: {
-                    specs: 'unittests/*.spec.js',
-                    outfile: 'test-results.html',
-                    keepRunner: true,
-                    helpers: [
-                        'lib/angular.js',
-                        'lib/angular-mocks.js'
-                    ]
-                }
-            }
-        },
         mocha: {
             options: {
                 run: true,
@@ -62,11 +48,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-mocha');
 
     grunt.registerTask('specs', ['concat', 'jshint', 'mocha']);
-    grunt.registerTask('unittests', ['concat', 'jshint', 'jasmine:all']);
     grunt.registerTask('default', ['csslint', 'specs']);
     grunt.registerTask('dev', ['default', 'watch']);
 };
