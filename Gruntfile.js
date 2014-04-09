@@ -47,6 +47,15 @@ module.exports = function(grunt) {
                 }
             }
         },
+        mocha: {
+            options: {
+                run: true,
+                reporter: 'Spec',
+            },
+            test: {
+                src: ['specs.html'],
+            },
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
@@ -54,8 +63,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
+    grunt.loadNpmTasks('grunt-mocha');
 
+    grunt.registerTask('specs', ['concat', 'jshint', 'mocha']);
     grunt.registerTask('unittests', ['concat', 'jshint', 'jasmine:all']);
-    grunt.registerTask('default', ['csslint', 'unittests']);
+    grunt.registerTask('default', ['csslint', 'specs']);
     grunt.registerTask('dev', ['default', 'watch']);
 };
